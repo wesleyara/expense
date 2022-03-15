@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { NavBar } from "../layout/NavBar";
-import { HomePage } from "../components/Home";
+import { HomePage } from "../components/HomePage";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {

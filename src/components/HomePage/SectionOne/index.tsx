@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 import { SHome } from "./style";
 
-export function HomePage() {
+export function SectionOne() {
   const router = useRouter();
 
   function handleNavigate() {
