@@ -16,6 +16,9 @@ const Home: NextPage = () => {
         listOne="Features"
         listTwo="About us"
         listThree="Pricing"
+        linkOne="#features"
+        linkTwo="#aboutUs"
+        linkThree="#pricing"
         buttonDescriber="Try free"
         eventClick={handleNavigate}
       />

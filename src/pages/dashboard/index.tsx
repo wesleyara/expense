@@ -11,8 +11,11 @@ export default function Dashboard() {
   return (
     <>
       <NavBar
-        listOne="Dashboard"
+        listOne="Overview"
         listTwo="List"
+        linkOne="/dashboard"
+        linkTwo="/dashboard/list"
+        linkThree="/"
         buttonDescriber="Home"
         eventClick={handleNavigate}
       />
