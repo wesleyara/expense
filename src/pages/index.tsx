@@ -1,9 +1,25 @@
 import type { NextPage } from "next";
+import { NavBar } from "../layout/NavBar";
+import { HomePage } from "../components/Home";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
+  function handleNavigate() {
+    router.push("/dashboard");
+  }
+
   return (
     <>
-      <h1>Olá mundo</h1>
+      <NavBar
+        listOne="Features"
+        listTwo="About us"
+        listThree="Pricing"
+        buttonDescriber="Try free"
+        eventClick={handleNavigate}
+      />
+      <HomePage />
     </>
   );
 };
