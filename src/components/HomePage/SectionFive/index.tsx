@@ -4,7 +4,7 @@ import { SHome } from "./style";
 export function SectionFive() {
   return (
     <SHome>
-      <main>
+      <article>
         <span>USE ANYTIME</span>
         <div>
           <h1>Use anytime whe you need</h1>
@@ -13,8 +13,8 @@ export function SectionFive() {
             want.
           </span>
         </div>
-      </main>
-      <aside>
+      </article>
+      <figure>
         <span>
           <Image
             src="/assets/images/ilustration-secfive.svg"
@@ -24,7 +24,7 @@ export function SectionFive() {
             layout="responsive"
           />
         </span>
-      </aside>
+      </figure>
     </SHome>
   );
 }

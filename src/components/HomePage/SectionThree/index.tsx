@@ -5,7 +5,7 @@ import { SHome } from "./style";
 export function SectionThree() {
   return (
     <SHome id="features">
-      <main>
+      <article>
         <span>ALWALYS ONLINE</span>
         <div>
           <h1>Real-time support with cloud</h1>
@@ -17,8 +17,8 @@ export function SectionThree() {
         <span className="linkSpan">
           Learn more <AiOutlineArrowRight />
         </span>
-      </main>
-      <aside>
+      </article>
+      <figure>
         <span>
           <Image
             src="/assets/images/ilustration-secthree.svg"
@@ -28,7 +28,7 @@ export function SectionThree() {
             layout="responsive"
           />
         </span>
-      </aside>
+      </figure>
     </SHome>
   );
 }

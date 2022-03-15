@@ -4,7 +4,7 @@ import { SHome } from "./style";
 export function SectionFour() {
   return (
     <SHome>
-      <aside>
+      <figure>
         <span>
           <Image
             src="/assets/images/ilustration-secfour.svg"
@@ -14,8 +14,8 @@ export function SectionFour() {
             layout="responsive"
           />
         </span>
-      </aside>
-      <main>
+      </figure>
+      <article>
         <span>FREE SOME COST</span>
         <div>
           <h1>Save cost for you and family</h1>
@@ -24,7 +24,7 @@ export function SectionFour() {
             control your money.
           </span>
         </div>
-      </main>
+      </article>
     </SHome>
   );
 }

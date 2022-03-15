@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SHome = styled.section`
+export const SHome = styled.article`
   width: 80%;
   margin: 80px auto;
   display: flex;
@@ -20,7 +20,7 @@ export const SHome = styled.section`
   }
 `;
 
-export const SFeatures = styled.div`
+export const SFeatures = styled.article`
   width: 80%;
   margin: 50px auto;
   display: flex;

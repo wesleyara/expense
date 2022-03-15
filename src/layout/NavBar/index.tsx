@@ -16,9 +16,9 @@ interface NavBarProps {
 export function NavBar(props: NavBarProps) {
   return (
     <SNavBar>
-      <div>
+      <header>
         <span>EX</span> pense
-      </div>
+      </header>
 
       <ul>
         <Link href={props.linkOne}>

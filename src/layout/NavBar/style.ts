@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SNavBar = styled.section`
+export const SNavBar = styled.nav`
   width: 80%;
   margin: 20px auto;
   display: flex;

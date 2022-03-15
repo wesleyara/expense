@@ -6,7 +6,7 @@ import { SFeatures, SHome } from "./style";
 
 export function SectionSix() {
   return (
-    <>
+    <section>
       <SHome id="aboutUs">
         <h1>The Product we work with.</h1>
         <span>
@@ -41,6 +41,6 @@ export function SectionSix() {
           <span>Access on any device</span>
         </div>
       </SFeatures>
-    </>
+    </section>
   );
 }

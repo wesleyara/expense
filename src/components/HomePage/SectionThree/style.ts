@@ -5,7 +5,7 @@ export const SHome = styled.section`
   margin: 80px auto;
   display: flex;
 
-  main {
+  article {
     flex: 1;
     margin-left: 20px;
 
@@ -56,7 +56,7 @@ export const SHome = styled.section`
     }
   }
 
-  aside {
+  figure {
     flex: 1;
   }
 `;
