@@ -18,7 +18,7 @@ export function SectionOne() {
           <span>Helps you to organize your income and expenses</span>
         </div>
         <div className="btBox">
-          <button onClick={handleNavigate}>Free to test</button>
+          <button onClick={handleNavigate}>Start now</button>
           <span>- Web, iOs and Android</span>
         </div>
       </main>

@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         linkOne="#features"
         linkTwo="#aboutUs"
         linkThree="#pricing"
-        buttonDescriber="Try free"
+        buttonDescriber="Start"
         eventClick={handleNavigate}
       />
       <HomePage />

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SHome = styled.section`
   width: 80%;
-  margin: 50px auto;
+  margin: 80px auto;
   display: flex;
 
   main {
