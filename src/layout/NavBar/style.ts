@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SNavBar = styled.nav`
+export const SNavBar = styled.header`
   width: 80%;
   margin: 20px auto;
   display: flex;
@@ -21,6 +21,10 @@ export const SNavBar = styled.nav`
     font-size: 16px;
   }
 
+  .btnMenu {
+    display: none;
+  }
+
   ul {
     list-style: none;
     display: flex;
@@ -36,7 +40,7 @@ export const SNavBar = styled.nav`
     }
   }
 
-  button {
+  .btnNavigate {
     font-family: "Hind Siliguri", sans-serif;
     font-size: 18px;
     height: 40px;
@@ -50,6 +54,60 @@ export const SNavBar = styled.nav`
     &:hover {
       background-color: #ff7235;
       color: white;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 90%;
+
+    .btnMenu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: white;
+      border: none;
+      cursor: pointer;
+
+      font-size: 30px;
+    }
+
+    .btnNavigate {
+      display: none;
+    }
+
+    ul {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 76px;
+      right: 0px;
+      background-color: white;
+      height: 0px;
+      z-index: 1000;
+      transition: 1s;
+      visibility: hidden;
+      overflow: hidden;
+    }
+
+    nav.active ul {
+      height: calc(100vh - 76px);
+      visibility: visible;
+      overflow: auto;
+    }
+
+    ul {
+      padding: 1rem 30px;
+
+      li {
+        padding: 10px;
+        border-bottom: 2px solid rgba(255, 114, 53, 0.5);
+
+        &:hover {
+          background-color: #ff7235;
+          color: white;
+        }
+      }
     }
   }
 `;

@@ -1,6 +1,9 @@
 import Link from "next/link";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useState } from "react";
 import { SNavBar } from "./style";
+
+import { GiHamburgerMenu } from "react-icons/gi";
+import { CgMenuMotion } from "react-icons/cg";
 
 interface NavBarProps {
   listOne: string;
@@ -14,25 +17,38 @@ interface NavBarProps {
 }
 
 export function NavBar(props: NavBarProps) {
+  const [active, setActive] = useState(false);
+
+  function handleActive() {
+    setActive(!active);
+  }
+
   return (
     <SNavBar>
-      <header>
+      <div>
         <span>EX</span> pense
-      </header>
+      </div>
 
-      <ul>
-        <Link href={props.linkOne}>
-          <li>{props.listOne}</li>
-        </Link>
-        <Link href={props.linkTwo}>
-          <li>{props.listTwo}</li>
-        </Link>
-        <Link href={props.linkThree}>
-          <li>{props.listThree}</li>
-        </Link>
-      </ul>
+      <nav className={active ? "active" : ""}>
+        <button className="btnMenu" onClick={handleActive}>
+          {!active ? <GiHamburgerMenu /> : <CgMenuMotion />}
+        </button>
+        <ul>
+          <Link href={props.linkOne}>
+            <li onClick={handleActive}>{props.listOne}</li>
+          </Link>
+          <Link href={props.linkTwo}>
+            <li onClick={handleActive}>{props.listTwo}</li>
+          </Link>
+          <Link href={props.linkThree}>
+            <li onClick={handleActive}>{props.listThree}</li>
+          </Link>
+        </ul>
+      </nav>
 
-      <button onClick={props.eventClick}>{props.buttonDescriber}</button>
+      <button className="btnNavigate" onClick={props.eventClick}>
+        {props.buttonDescriber}
+      </button>
     </SNavBar>
   );
 }
