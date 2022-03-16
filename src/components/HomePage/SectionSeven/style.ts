@@ -4,8 +4,9 @@ export const SHome = styled.section`
   width: 80%;
   margin: 50px auto;
 
-  h1 {
-    font-size: 6rem;
+  h2 {
+    font-size: max(60px, 7.4vw);
+    line-height: 1.02;
     text-align: center;
   }
 
@@ -14,6 +15,10 @@ export const SHome = styled.section`
     width: 288px;
     margin: 50px auto;
     padding: 50px;
+
+    h3 {
+      font-size: 25px;
+    }
 
     svg {
       font-size: 30px;

@@ -4,19 +4,22 @@ export const SHome = styled.article`
   width: 80%;
   margin: 80px auto;
   display: flex;
+  flex-wrap: wrap;
 
-  h1 {
-    font-size: 6rem;
-    line-height: 6.2rem;
+  h2 {
+    font-size: max(60px, 7.4vw);
+    line-height: 1.02;
     flex: 2;
+    min-width: 330px;
   }
 
   span {
     display: inline-block;
     color: #bdbdbd;
-    font-size: 23px;
+    font-size: max(1.7vw, 16px);
     margin-top: 20px;
     flex: 1;
+    min-width: 330px;
   }
 `;
 
@@ -25,8 +28,10 @@ export const SFeatures = styled.article`
   margin: 50px auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   .cardFeatures {
+    margin-top: 20px;
     width: 288px;
     text-align: center;
     padding: 70px 50px 70px 50px;

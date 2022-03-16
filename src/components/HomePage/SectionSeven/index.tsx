@@ -6,11 +6,11 @@ import { SHome } from "./style";
 export function SectionSeven() {
   return (
     <SHome>
-      <h1>Free forever</h1>
+      <h2 id="pricing">Free forever</h2>
 
       <div>
         <BiPlanet />
-        <h2>Free plan</h2>
+        <h3>Free plan</h3>
 
         <ul>
           <li>Unlimited storage</li>

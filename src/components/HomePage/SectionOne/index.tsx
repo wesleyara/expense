@@ -23,15 +23,13 @@ export function SectionOne() {
         </div>
       </main>
       <aside>
-        <span>
-          <Image
-            src="/assets/images/ilustration-home.svg"
-            alt="ilustration home"
-            width={100}
-            height={100}
-            layout="responsive"
-          />
-        </span>
+        <Image
+          src="/assets/images/ilustration-home.svg"
+          alt="ilustration home"
+          width={100}
+          height={100}
+          layout="responsive"
+        />
       </aside>
     </SHome>
   );

@@ -4,14 +4,16 @@ export const SHome = styled.section`
   width: 80%;
   margin: 80px auto;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
 
   article {
     flex: 1;
-    margin-left: 20px;
+    min-width: 330px;
 
-    h1 {
-      font-size: 6em;
-      line-height: 6rem;
+    h2 {
+      font-size: max(60px, 7.4vw);
+      line-height: 1.02;
       margin-top: 35px;
       color: #292830;
     }
@@ -19,30 +21,13 @@ export const SHome = styled.section`
     span {
       display: inline-block;
       color: #bdbdbd;
-      font-size: 23px;
+      font-size: max(1.7vw, 16px);
       margin-top: 0px;
-    }
-
-    .btBox {
-      button {
-        padding: 10px 30px 10px 30px;
-        margin-top: 40px;
-        font-size: 35px;
-        color: white;
-        background-color: #ff7235;
-        border: 2px solid #ff7235;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &:hover {
-          background-color: white;
-          color: #ff7235;
-        }
-      }
     }
   }
 
   figure {
     flex: 1;
+    min-width: 330px;
   }
 `;

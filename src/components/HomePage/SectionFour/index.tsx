@@ -18,7 +18,7 @@ export function SectionFour() {
       <article>
         <span>FREE SOME COST</span>
         <div>
-          <h1>Save cost for you and family</h1>
+          <h2>Save cost for you and family</h2>
           <span>
             The EXpense has been saving people&apos;s dreams helping to save and
             control your money.

@@ -8,7 +8,7 @@ export function SectionThree() {
       <article>
         <span>ALWALYS ONLINE</span>
         <div>
-          <h1>Real-time support with cloud</h1>
+          <h2>Real-time support with cloud</h2>
           <span>
             Support available 24 hours a day. Every day of the week, to deliver
             the best experience possible.

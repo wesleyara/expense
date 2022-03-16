@@ -4,13 +4,16 @@ export const SHome = styled.section`
   width: 80%;
   margin: 80px auto;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   main {
     flex: 1;
+    min-width: 330px;
 
     h1 {
-      font-size: 6.2em;
-      line-height: 6rem;
+      font-size: max(60px, 7.4vw);
+      line-height: 1.02;
       margin-top: 35px;
       color: #292830;
     }
@@ -18,15 +21,15 @@ export const SHome = styled.section`
     span {
       display: inline-block;
       color: #bdbdbd;
-      font-size: 23px;
+      font-size: max(1.7vw, 16px);
       margin-top: 20px;
     }
 
     .btBox {
       button {
-        padding: 10px 30px 10px 30px;
+        padding: 1vw 1.3vw 1vw 1.3vw;
         margin-top: 40px;
-        font-size: 35px;
+        font-size: max(2.1vw, 18px);
         color: white;
         background-color: #ff7235;
         border: 2px solid #ff7235;
@@ -48,5 +51,6 @@ export const SHome = styled.section`
 
   aside {
     flex: 1;
+    min-width: 330px;
   }
 `;

@@ -8,7 +8,7 @@ export function SectionSix() {
   return (
     <section>
       <SHome id="aboutUs">
-        <h1>The Product we work with.</h1>
+        <h2>The Product we work with.</h2>
         <span>
           Everything we developed it was made for you. See each of our features,
           designed exclusively for your best experience using our product.
