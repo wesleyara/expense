@@ -7,7 +7,7 @@ export function SectionFive() {
       <article>
         <span>USE ANYTIME</span>
         <div>
-          <h1>Use anytime whe you need</h1>
+          <h2>Use anytime whe you need</h2>
           <span>
             Any time, any moment. Use our services whenever and wherever you
             want.
