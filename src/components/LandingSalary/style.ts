@@ -2,14 +2,16 @@ import styled from "styled-components";
 
 export const SHome = styled.section`
   width: 80%;
-  margin: 50px auto;
+  max-width: 1100px;
+  padding: 2rem 0;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 
   article {
     flex: 1;
-    min-width: 330px;
+    min-width: 300px;
 
     div {
       .logo {
@@ -88,6 +90,6 @@ export const SHome = styled.section`
 
   figure {
     flex: 1;
-    min-width: 330px;
+    min-width: 300px;
   }
 `;

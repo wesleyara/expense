@@ -38,7 +38,7 @@ export function SectionSix() {
             <FaMobileAlt />
           </div>
           <h2>Cross plataform</h2>
-          <span>Access on any device</span>
+          <span>You have acess on any devices</span>
         </div>
       </SFeatures>
     </section>

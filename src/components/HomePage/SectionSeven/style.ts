@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const SHome = styled.section`
   width: 80%;
-  margin: 50px auto;
+  max-width: 1100px;
+  padding: 2rem 0;
+  margin: 0 auto;
 
   h2 {
-    font-size: max(60px, 7.4vw);
+    font-size: max(50px, 7.4vw);
     line-height: 1.02;
     text-align: center;
   }
@@ -57,6 +59,12 @@ export const SHome = styled.section`
       svg {
         font-size: 16px;
       }
+    }
+  }
+
+  @media screen and (min-width: 1365px) {
+    h2 {
+      font-size: 92px;
     }
   }
 `;
