@@ -101,11 +101,10 @@ export const SNavBar = styled.header`
 
       li {
         padding: 10px;
-        border-bottom: 2px solid rgba(255, 114, 53, 0.5);
+        border: 2px solid transparent;
 
         &:hover {
-          background-color: #ff7235;
-          color: white;
+          border: 2px solid transparent;
         }
       }
     }
