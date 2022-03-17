@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ilustrationSecfive from "../../../assets/images/ilustration-secfive.svg";
 import { SHome } from "./style";
 
 export function SectionFive() {
@@ -16,13 +16,7 @@ export function SectionFive() {
       </article>
       <figure>
         <span>
-          <Image
-            src="/assets/images/ilustration-secfive.svg"
-            alt="ilustration home"
-            width={100}
-            height={100}
-            layout="responsive"
-          />
+          <img src={ilustrationSecfive} alt="ilustration home" />
         </span>
       </figure>
     </SHome>

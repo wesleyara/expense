@@ -9,7 +9,7 @@ export const SHome = styled.article`
   flex-wrap: wrap;
 
   h2 {
-    font-size: max(50px, 7.4vw);
+    font-size: max(50px, 6.1vw);
     line-height: 1.02;
     flex: 2;
     min-width: 330px;
@@ -26,7 +26,7 @@ export const SHome = styled.article`
 
   @media screen and (min-width: 1365px) {
     h2 {
-      font-size: 92px;
+      font-size: 76px;
     }
 
     span {

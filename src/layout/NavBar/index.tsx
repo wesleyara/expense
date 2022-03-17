@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { MouseEventHandler, useState } from "react";
 import { SNavBar } from "./style";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgMenuMotion } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 interface NavBarProps {
   listOne: string;
@@ -34,13 +34,13 @@ export function NavBar(props: NavBarProps) {
           {!active ? <GiHamburgerMenu /> : <CgMenuMotion />}
         </button>
         <ul>
-          <Link href={props.linkOne}>
+          <Link to={props.linkOne}>
             <li onClick={handleActive}>{props.listOne}</li>
           </Link>
-          <Link href={props.linkTwo}>
+          <Link to={props.linkTwo}>
             <li onClick={handleActive}>{props.listTwo}</li>
           </Link>
-          <Link href={props.linkThree}>
+          <Link to={props.linkThree}>
             <li onClick={handleActive}>{props.listThree}</li>
           </Link>
         </ul>

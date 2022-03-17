@@ -1,6 +1,7 @@
-import Image from "next/image";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { SHome } from "./style";
+
+import ilustrationSecthree from "../../../assets/images/ilustration-secthree.svg";
 
 export function SectionThree() {
   return (
@@ -20,13 +21,7 @@ export function SectionThree() {
       </article>
       <figure>
         <span>
-          <Image
-            src="/assets/images/ilustration-secthree.svg"
-            alt="ilustration home"
-            width={100}
-            height={100}
-            layout="responsive"
-          />
+          <img src={ilustrationSecthree} alt="ilustration home" />
         </span>
       </figure>
     </SHome>

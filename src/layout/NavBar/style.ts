@@ -30,6 +30,11 @@ export const SNavBar = styled.header`
     display: flex;
     gap: 20px;
 
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
     li {
       cursor: pointer;
       border-bottom: 2px solid transparent;

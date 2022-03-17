@@ -14,7 +14,7 @@ export const SHome = styled.section`
     min-width: 300px;
 
     h2 {
-      font-size: max(50px, 7.4vw);
+      font-size: max(50px, 6.1vw);
       line-height: 1.02;
       margin-top: 35px;
       color: #292830;
@@ -45,12 +45,16 @@ export const SHome = styled.section`
   figure {
     flex: 1;
     min-width: 300px;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   @media screen and (min-width: 1365px) {
     article {
       h2 {
-        font-size: 92px;
+        font-size: 76px;
       }
 
       span {

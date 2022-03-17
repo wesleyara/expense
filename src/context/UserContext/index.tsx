@@ -4,7 +4,6 @@ import {
   SetStateAction,
   useState,
   createContext,
-  useEffect,
 } from "react";
 
 import { UserTypes } from "../../@types";
@@ -22,14 +21,6 @@ export const UserContext = createContext({} as UserContextTypes);
 
 export function UserContextProvider(props: UserContextProviderProps) {
   const [user, setUser] = useState<UserTypes>();
-
-  useEffect(() => {
-    const localUser = localStorage.getItem("localUser");
-
-    if (localUser) {
-      setUser(JSON.parse(localUser));
-    }
-  }, []);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>

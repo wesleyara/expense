@@ -7,7 +7,7 @@ export const SHome = styled.section`
   margin: 0 auto;
 
   h2 {
-    font-size: max(50px, 7.4vw);
+    font-size: max(50px, 6.1vw);
     line-height: 1.02;
     text-align: center;
   }
@@ -64,7 +64,7 @@ export const SHome = styled.section`
 
   @media screen and (min-width: 1365px) {
     h2 {
-      font-size: 92px;
+      font-size: 76px;
     }
   }
 `;
