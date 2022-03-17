@@ -2,6 +2,7 @@ import "../styles/index.scss";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import { UserContextProvider } from "../context/UserContext";
+import { DataContextProvider } from "../context/DataContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,7 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/icon.png" />
       </Head>
       <UserContextProvider>
-        <Component {...pageProps} />
+        <DataContextProvider>
+          <Component {...pageProps} />
+        </DataContextProvider>
       </UserContextProvider>
     </>
   );
