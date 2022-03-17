@@ -1,4 +1,6 @@
 import { useRouter } from "next/router";
+import { LandingSalary } from "../../components/LandingSalary";
+import { useUser } from "../../hooks/useUser";
 import { NavBar } from "../../layout/NavBar";
 
 export default function Dashboard() {
@@ -8,17 +10,23 @@ export default function Dashboard() {
     router.push("/");
   }
 
+  const { user } = useUser();
+
   return (
     <>
-      <NavBar
-        listOne="Overview"
-        listTwo="List"
-        linkOne="/dashboard"
-        linkTwo="/dashboard/list"
-        linkThree="/"
-        buttonDescriber="Home"
-        eventClick={handleNavigate}
-      />
+      {!user ? (
+        <LandingSalary />
+      ) : (
+        <NavBar
+          listOne="Overview"
+          listTwo="List"
+          linkOne="/dashboard"
+          linkTwo="/dashboard/list"
+          linkThree="/"
+          buttonDescriber="Home"
+          eventClick={handleNavigate}
+        />
+      )}
     </>
   );
 }
