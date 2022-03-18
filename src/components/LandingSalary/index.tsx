@@ -1,6 +1,6 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useUser } from "../../hooks/useUser";
-import Loadings from "../../components/Loading";
+import Loadings from "../Loading";
 import { SHome } from "./style";
 import ilustration from "../../assets/images/ilustration-secfive.svg";
 
@@ -21,9 +21,7 @@ export default function LandingSalary() {
     e.preventDefault();
 
     if (count + free + savings < 100) {
-      alert(
-        "A soma dos três tipos de divisões do dinheiro tem que ser igual a 100",
-      );
+      alert("A soma dos valores de porcentagem devem ser igual a 100.");
       return;
     }
 
