@@ -17,7 +17,6 @@ export const SStats = styled.section`
   button {
     display: block;
     margin: 20px auto;
-    font-family: "Hind Siliguri", sans-serif;
     font-size: 20px;
     padding: 10px 40px 10px 40px;
     background-color: #ff7235;

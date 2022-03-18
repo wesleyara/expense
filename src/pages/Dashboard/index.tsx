@@ -1,21 +1,30 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+
 import { Infos } from "../../components/Infos";
 import { Stats } from "../../components/Stats";
 import { useUser } from "../../hooks/useUser";
 import { NavBar } from "../../layout/NavBar";
-import LandingSalary from "../Dataset";
+import LandingSalary from "../../components/LandingSalary";
 
 export default function Dashboard() {
+  // useStates
+
   const [home, setHome] = useState(false);
 
+  // const imports
+
   const router = useHistory();
+
+  const { user, setUser } = useUser();
+
+  // handleFunctions
 
   function handleNavigate() {
     router.push("/");
   }
 
-  const { user, setUser } = useUser();
+  // UseEffects
 
   useEffect(() => {
     if (matchMedia("(max-width: 650px)").matches) {
