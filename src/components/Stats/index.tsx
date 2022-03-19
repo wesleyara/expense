@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
 import { useUser } from "../../hooks/useUser";
+import { NewModal } from "../NewModal";
 import { StatsBox } from "../StatsBox";
 import { SStats } from "./style";
-import Modal from "react-modal";
 
 interface PercentsTypes {
   countDed: string;
   freeDed: string;
   savingsDed: string;
 }
-
-Modal.setAppElement("#root");
 
 export function Stats() {
   const { user } = useUser();
@@ -68,9 +66,10 @@ export function Stats() {
         )}
       </div>
       <button onClick={handleIsModalOpen}>Nova Compra</button>
-      <Modal isOpen={isModalOpen} onRequestClose={handleIsModalClose}>
-        <h2>Nova Compra</h2>
-      </Modal>
+      <NewModal
+        isModalOpen={isModalOpen}
+        handleIsModalClose={handleIsModalClose}
+      />
     </SStats>
   );
 }
