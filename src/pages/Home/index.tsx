@@ -25,6 +25,7 @@ export default function Home() {
     <>
       {user ? (
         <NavBar
+          link={false}
           listOne="Features"
           listTwo="About us"
           listThree="Pricing"
@@ -36,6 +37,7 @@ export default function Home() {
         />
       ) : (
         <NavBar
+          link={false}
           listOne="Features"
           listTwo="About us"
           listThree="Pricing"

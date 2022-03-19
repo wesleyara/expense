@@ -14,6 +14,7 @@ interface NavBarProps {
   linkOne: string;
   linkTwo: string;
   linkThree: string;
+  link: boolean;
 }
 
 export function NavBar(props: NavBarProps) {
@@ -34,15 +35,31 @@ export function NavBar(props: NavBarProps) {
           {!active ? <GiHamburgerMenu /> : <CgMenuMotion />}
         </button>
         <ul>
-          <Link to={props.linkOne}>
-            <li onClick={handleActive}>{props.listOne}</li>
-          </Link>
-          <Link to={props.linkTwo}>
-            <li onClick={handleActive}>{props.listTwo}</li>
-          </Link>
-          <Link to={props.linkThree}>
-            <li onClick={handleActive}>{props.listThree}</li>
-          </Link>
+          {props.link ? (
+            <>
+              <Link to={props.linkOne}>
+                <li onClick={handleActive}>{props.listOne}</li>
+              </Link>
+              <Link to={props.linkTwo}>
+                <li onClick={handleActive}>{props.listTwo}</li>
+              </Link>
+              <Link to={props.linkThree}>
+                <li onClick={handleActive}>{props.listThree}</li>
+              </Link>
+            </>
+          ) : (
+            <>
+              <a href={props.linkOne}>
+                <li onClick={handleActive}>{props.listOne}</li>
+              </a>
+              <a href={props.linkTwo}>
+                <li onClick={handleActive}>{props.listTwo}</li>
+              </a>
+              <a href={props.linkThree}>
+                <li onClick={handleActive}>{props.listThree}</li>
+              </a>
+            </>
+          )}
         </ul>
       </nav>
 

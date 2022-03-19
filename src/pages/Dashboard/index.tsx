@@ -51,6 +51,7 @@ export default function Dashboard() {
       {user ? (
         <>
           <NavBar
+            link={true}
             listOne="Overview"
             listTwo="List"
             listThree={`${home == true ? "Home" : ""}`}
