@@ -4,3 +4,9 @@ export interface UserTypes {
   percentFree: number;
   percentSavings: number;
 }
+
+export interface DataTypes {
+  item: string;
+  value: number;
+  type: string;
+}
