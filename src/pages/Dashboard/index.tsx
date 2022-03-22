@@ -6,6 +6,7 @@ import { Stats } from "../../components/Stats";
 import { useUser } from "../../hooks/useUser";
 import { NavBar } from "../../layout/NavBar";
 import LandingSalary from "../../components/LandingSalary";
+import { useData } from "../../hooks/useData";
 
 export default function Dashboard() {
   // useStates
@@ -17,6 +18,7 @@ export default function Dashboard() {
   const router = useHistory();
 
   const { user, setUser } = useUser();
+  const { setData } = useData();
 
   // handleFunctions
 
@@ -45,6 +47,14 @@ export default function Dashboard() {
       setUser(JSON.parse(localUser));
     }
   }, [setUser]);
+
+  useEffect(() => {
+    const dataBuy = localStorage.getItem("dataBuy");
+
+    if (dataBuy) {
+      setData(JSON.parse(dataBuy));
+    }
+  }, [setData]);
 
   return (
     <>

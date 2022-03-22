@@ -31,3 +31,53 @@ export const SStats = styled.section`
     }
   }
 `;
+
+export const SForm = styled.form`
+  input {
+    margin-top: 10px;
+    border: 1px solid #ff7235;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    &:focus {
+      outline: 1px;
+    }
+  }
+
+  input[type="number"] {
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  select {
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    border: 1px solid #ff7235;
+    background-color: white;
+
+    &:focus {
+      outline: 1px;
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 40px 10px 40px;
+    background-color: #ff7235;
+    border: 1px solid #ff7235;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+      color: #ff7235;
+    }
+  }
+`;

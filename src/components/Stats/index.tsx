@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, FormEvent } from "react";
 import { useUser } from "../../hooks/useUser";
-import { NewModal } from "../NewModal";
 import { StatsBox } from "../StatsBox";
 import { SStats } from "./style";
+
+import Modal from "react-modal";
+import { SForm } from "./style";
+import { useData } from "../../hooks/useData";
 
 interface PercentsTypes {
   countDed: string;
@@ -10,19 +13,11 @@ interface PercentsTypes {
   savingsDed: string;
 }
 
+Modal.setAppElement("#root");
+
 export function Stats() {
   const { user } = useUser();
   const [percents, setPercents] = useState<PercentsTypes>();
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  function handleIsModalOpen() {
-    setIsModalOpen(true);
-  }
-
-  function handleIsModalClose() {
-    setIsModalOpen(false);
-  }
 
   useEffect(() => {
     if (user) {
@@ -40,6 +35,53 @@ export function Stats() {
       });
     }
   }, [user]);
+
+  // Modal Section
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [valueBuy, setValueBuy] = useState(0);
+  const [nameBuy, setNameBuy] = useState("");
+  const [selectChange, setSelectChange] = useState("");
+
+  function handleIsModalOpen() {
+    setIsModalOpen(true);
+  }
+
+  function handleIsModalClose() {
+    setIsModalOpen(false);
+  }
+
+  const { data, setData } = useData();
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+
+    if (selectChange == "" || selectChange == "none") {
+      alert("Escolha o tipo de conta a ser debitado");
+      return;
+    } else if (nameBuy.trim() === "" || valueBuy === 0) {
+      alert("Preencha os campos que faltam");
+      return;
+    } else {
+      setData(
+        data.concat([
+          {
+            item: nameBuy,
+            value: valueBuy,
+            type: selectChange,
+          },
+        ]),
+      );
+    }
+
+    handleIsModalClose();
+  }
+
+  useEffect(() => {
+    if (data.length > 0) {
+      localStorage.setItem("dataBuy", JSON.stringify(data));
+    }
+  }, [data]);
 
   return (
     <SStats>
@@ -66,10 +108,37 @@ export function Stats() {
         )}
       </div>
       <button onClick={handleIsModalOpen}>Nova Compra</button>
-      <NewModal
-        isModalOpen={isModalOpen}
-        handleIsModalClose={handleIsModalClose}
-      />
+
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={handleIsModalClose}
+        overlayClassName="overlay-modal"
+        className="modal"
+      >
+        <h2>Nova Compra</h2>
+        <SForm onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Nome da compra"
+            onChange={(e) => setNameBuy(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="Valor da compra"
+            onChange={(e) => setValueBuy(Number(e.target.value))}
+          />
+          <br />
+          Tipo de compra:{" "}
+          <select onChange={(e) => setSelectChange(e.target.value)}>
+            <option value="none">Select</option>
+            <option value="count">Count</option>
+            <option value="free">Free</option>
+            <option value="savings">Savings</option>
+          </select>
+          <br />
+          <button type="submit">Adicionar</button>
+        </SForm>
+      </Modal>
     </SStats>
   );
 }
