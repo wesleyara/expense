@@ -3,7 +3,7 @@ import { SHome } from "./style";
 
 export function SectionFive() {
   return (
-    <SHome>
+    <SHome data-aos="fade-left">
       <article>
         <span>USE ANYTIME</span>
         <div>

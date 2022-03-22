@@ -5,7 +5,7 @@ import { SHome } from "./style";
 
 export function SectionSeven() {
   return (
-    <SHome>
+    <SHome data-aos="fade-left">
       <h2 id="pricing">Free forever</h2>
 
       <div>

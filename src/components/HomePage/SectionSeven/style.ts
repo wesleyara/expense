@@ -54,6 +54,10 @@ export const SHome = styled.section`
       &:hover {
         background-color: #ff7235;
         color: white;
+
+        svg {
+          color: white;
+        }
       }
 
       svg {

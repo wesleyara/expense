@@ -6,7 +6,7 @@ import { SFeatures, SHome } from "./style";
 
 export function SectionSix() {
   return (
-    <section>
+    <section data-aos="fade-right">
       <SHome id="aboutUs">
         <h2>The Product we work with.</h2>
         <span>
