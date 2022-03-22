@@ -6,11 +6,12 @@ import { SStats } from "./style";
 import Modal from "react-modal";
 import { SForm } from "./style";
 import { useData } from "../../hooks/useData";
+import { DataTypes } from "../../@types";
 
 interface PercentsTypes {
-  countDed: string;
-  freeDed: string;
-  savingsDed: string;
+  countDed: number;
+  freeDed: number;
+  savingsDed: number;
 }
 
 Modal.setAppElement("#root");
@@ -22,16 +23,9 @@ export function Stats() {
   useEffect(() => {
     if (user) {
       setPercents({
-        countDed: (user.salary * (user.percentCount / 100))
-          .toFixed(2)
-          .replace(".", ",")
-          .toLocaleString(),
-        freeDed: (user.salary * (user.percentFree / 100))
-          .toFixed(2)
-          .replace(".", ","),
-        savingsDed: (user.salary * (user.percentSavings / 100))
-          .toFixed(2)
-          .replace(".", ","),
+        countDed: user.salary * (user.percentCount / 100),
+        freeDed: user.salary * (user.percentFree / 100),
+        savingsDed: user.salary * (user.percentSavings / 100),
       });
     }
   }, [user]);
@@ -83,6 +77,26 @@ export function Stats() {
     }
   }, [data]);
 
+  useEffect(() => {
+    const dataBuy = localStorage.getItem("dataBuy");
+
+    if (dataBuy) {
+      setData(JSON.parse(dataBuy));
+    }
+  }, [setData]);
+
+  const filterCount = data.filter((val) => val.type === "count");
+  const filterFree = data.filter((val) => val.type === "free");
+  const filterSavings = data.filter((val) => val.type === "savings");
+
+  function calcReduce(array: DataTypes[]) {
+    const some = array.reduce((acc, item) => {
+      return acc + item.value;
+    }, 0);
+
+    return some;
+  }
+
   return (
     <SStats>
       <h1>Expense Stats:</h1>
@@ -90,24 +104,44 @@ export function Stats() {
         {percents && (
           <>
             <StatsBox
-              value={50}
-              avaliable={`${percents.countDed}`}
+              value={Number(
+                ((calcReduce(filterCount) * 100) / percents.countDed).toFixed(
+                  1,
+                ),
+              )}
+              avaliable={`${(percents.countDed - calcReduce(filterCount))
+                .toFixed(2)
+                .replace(".", ",")
+                .toLocaleString()}`}
               type="Count"
             />
             <StatsBox
-              value={50}
-              avaliable={`${percents.freeDed}`}
+              value={Number(
+                ((calcReduce(filterFree) * 100) / percents.freeDed).toFixed(1),
+              )}
+              avaliable={`${(percents.freeDed - calcReduce(filterFree))
+                .toFixed(2)
+                .replace(".", ",")
+                .toLocaleString()}`}
               type="Free"
             />
             <StatsBox
-              value={50}
-              avaliable={`${percents.savingsDed}`}
+              value={Number(
+                (
+                  (calcReduce(filterSavings) * 100) /
+                  percents.savingsDed
+                ).toFixed(1),
+              )}
+              avaliable={`${(percents.savingsDed - calcReduce(filterSavings))
+                .toFixed(2)
+                .replace(".", ",")
+                .toLocaleString()}`}
               type="Savings"
             />
           </>
         )}
       </div>
-      <button onClick={handleIsModalOpen}>Nova Compra</button>
+      <button onClick={handleIsModalOpen}>New Purchase</button>
 
       <Modal
         isOpen={isModalOpen}
@@ -115,20 +149,21 @@ export function Stats() {
         overlayClassName="overlay-modal"
         className="modal"
       >
-        <h2>Nova Compra</h2>
+        <span onClick={handleIsModalClose}>X</span>
+        <h2>Add a new purchase</h2>
         <SForm onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Nome da compra"
+            placeholder="Purchase name"
             onChange={(e) => setNameBuy(e.target.value)}
           />
           <input
             type="number"
-            placeholder="Valor da compra"
+            placeholder="Purchase value"
             onChange={(e) => setValueBuy(Number(e.target.value))}
           />
           <br />
-          Tipo de compra:{" "}
+          Purchase type:{" "}
           <select onChange={(e) => setSelectChange(e.target.value)}>
             <option value="none">Select</option>
             <option value="count">Count</option>
@@ -136,7 +171,7 @@ export function Stats() {
             <option value="savings">Savings</option>
           </select>
           <br />
-          <button type="submit">Adicionar</button>
+          <button type="submit">Add</button>
         </SForm>
       </Modal>
     </SStats>
