@@ -91,5 +91,9 @@ export const SHome = styled.section`
   figure {
     flex: 1;
     min-width: 300px;
+
+    img {
+      max-width: 100%;
+    }
   }
 `;
