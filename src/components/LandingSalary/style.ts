@@ -41,8 +41,8 @@ export const SHome = styled.section`
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 43px;
-          width: 43px;
+          height: 44px;
+          width: 44px;
 
           background-color: #ff7235;
           color: white;
@@ -73,7 +73,7 @@ export const SHome = styled.section`
         display: block;
         margin-top: 10px;
         border-radius: 5px;
-        height: 42.5px;
+        height: 44px;
         width: 243px;
         cursor: pointer;
         border: 1px solid #ff7235;
