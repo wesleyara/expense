@@ -16,7 +16,7 @@ export function Infos() {
               <li>Free: {user.percentFree}%</li>
               <li>Savings: {user.percentSavings}%</li>
             </ul>
-            <button onClick={() => setUser(undefined)}>Editar</button>
+            <button onClick={() => setUser(undefined)}>Edit</button>
           </span>
         </>
       )}
