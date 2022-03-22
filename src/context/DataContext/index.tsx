@@ -5,15 +5,10 @@ import {
   SetStateAction,
   useState,
 } from "react";
+import { DataTypes } from "../../@types";
 
 interface DataContextProviderProps {
   children: ReactNode;
-}
-
-interface DataTypes {
-  item: string;
-  value: number;
-  type: string;
 }
 
 interface DataContextTypes {
