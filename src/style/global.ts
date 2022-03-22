@@ -25,10 +25,18 @@ export const GlobalStyle = createGlobalStyle`
 
   .modal {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     background-color: white;
     border-radius: 5px;
     padding: 3rem;
     position: relative;
+
+    span {
+      position: absolute;
+      top: 5%;
+      left: 95%;
+      transform: translate(-95%, -5%);
+      cursor: pointer;
+    }
   }
 `;
