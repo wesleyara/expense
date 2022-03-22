@@ -23,7 +23,7 @@ export function SectionOne() {
   }, [setUser]);
 
   return (
-    <SHome>
+    <SHome data-aos="fade-right">
       {user ? (
         <>
           <main>
