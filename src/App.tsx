@@ -8,6 +8,7 @@ import List from "./pages/List";
 import Home from "./pages/Home";
 import { UserContextProvider } from "./context/UserContext";
 import { DataContextProvider } from "./context/DataContext";
+import { GlobalStyle } from "./style/global";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/list" component={List} />
           </Routes>
         </Router>
+        <GlobalStyle />
       </DataContextProvider>
     </UserContextProvider>
   );
