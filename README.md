@@ -1,38 +1,53 @@
-# Boilerplate Vite React
+# Expense
 
-## Descrição:
-O Vite é uma nova forma de criar aplicações em React, levando em consideração diferentes fatores, como velocidade da criação/inicialização e o suporte e constante atualizações do pacote, estou utilizando ele como substituto do <a href="https://www.npmjs.com/package/create-react-app">create-react-app</a>.
+O Expense é uma aplicação para gestão de seu dinheiro, onde você pode informar dados sobre o seu salário e quanto você deseja dedicar a cada uma das divisões do seu dinheiro, como contas, livre e poupança.
 
-## Guia:
-Todas informações e documentação do Vite está em <a href="https://vitejs.dev/guide/">Getting Started Vite</a>.
+## 🚀 Começando
 
-Para a documentação do próprio React temos o seguinte <a href="https://pt-br.reactjs.org/">link</a>.
+Para você utilizar esse projeto em sua máquina, basta dar um fork ou um git clone do repositório no Github.
 
-## O que já vem configurado?
-Tudo que eu julguei necessário na hora da criação de uma aplicação completa em React, como:
-<ul>
-<li>React Router: Para a criação de rotas na aplicação.</li>
-<li>Sass: Suporte para utilização de pré processadores CSS.</li>
-<li>ESlint: Configuração do ESlint.</li>
-<li>Prettier: Configuração do Prettier.</li>
-<li>Editorconfig: Configuração do editorconfig.</li>
-<li>Redirects: Redirecionamento para o deploy em host.</li>
-</ul>
+Consulte **Implantação** para saber como implantar o projeto.
 
-## Como usar?
-Esse boilerplate utiliza da linguagem TypeScript, caso você queira usar o próprio JavaScript, terá algumas coisas que deverão ser alteradas.
+### 📋 Pré-requisitos
 
-### Instalação:
-Para utilizar a aplicação primeiro é necessário clonar este repositório.
+Ter o <a href="https://nodejs.org/">Node</a> instalado, alguma IDE para edição, recomento o <a href="https://code.visualstudio.com/">Visual Studio Code</a> e instalar o <a href="https://classic.yarnpkg.com/en/">Yarn</a>:
 
 ```
-git clone https://github.com/wesleyara/boilerplate-vite-react
+npm install --global yarn
 ```
 
-Após ter clonado o repositório você terá que abrir o terminal e instalar todas as dependências:
+### 🔧 Instalação
+
+Após clonar o repositório para a sua máquina, abra o terminal na pasta e execute o seguinte comando:
 
 ```
-npm install
+yarn add
 ```
 
-Com isso, o boilerplate já está pronto para uso.
+E para rodar a aplicação, execute:
+
+```
+yarn dev
+```
+
+## 📦 Desenvolvimento
+
+Alguns códigos presentes dentro do meu projeto são de uma grande utilidade para cálculos, então podem ser reaproveitados em outras aplicações.
+
+## 🛠️ Construído com
+
+Ferramentas utilizadas no projeto:
+
+* React - A lib do Facebook
+* TypeScript - O superset do JavaScript
+* Styled Components - Uma lib do React
+* Eslint - O Linter
+* Prettier - Para a formatação
+
+## ✒️ Autores
+
+* **Wesley Araújo** - *Projeto inteiro* - [umdesenvolvedor](https://github.com/wesleyara)
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](https://github.com/wesley/expense/licenca) para detalhes.
