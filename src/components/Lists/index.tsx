@@ -117,6 +117,7 @@ export function Lists() {
               </ul>
             </>
           )}
+          <button onClick={() => setData([])}>Delete all purchases</button>
         </>
       ) : (
         <h3>Don&apos;t have any purchases yet.</h3>

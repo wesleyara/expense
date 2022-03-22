@@ -24,29 +24,29 @@ export const SList = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  button {
-    padding: 5px;
-    background-color: #ff7235;
-    border: 1px solid #ff7235;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
+    button {
+      padding: 5px;
+      background-color: #ff7235;
+      border: 1px solid #ff7235;
+      border-radius: 5px;
       color: white;
-    }
-
-    &:hover {
-      background-color: white;
-      color: #ff7235;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       svg {
+        color: white;
+      }
+
+      &:hover {
+        background-color: white;
         color: #ff7235;
+
+        svg {
+          color: #ff7235;
+        }
       }
     }
   }
@@ -54,5 +54,20 @@ export const SList = styled.section`
   h3 {
     text-align: center;
     margin-top: 30px;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 40px 10px 40px;
+    background-color: #ff7235;
+    border: 1px solid #ff7235;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+      color: #ff7235;
+    }
   }
 `;
