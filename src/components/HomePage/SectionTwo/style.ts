@@ -13,5 +13,6 @@ export const SHome = styled.section`
   img {
     width: 90%;
     border-radius: 20px 20px 0px 0px;
+    min-width: 300px;
   }
 `;
