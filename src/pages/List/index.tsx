@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { NavBar } from "../../layout/NavBar";
 import { useUser } from "../../hooks/useUser";
 import LandingSalary from "../../components/LandingSalary";
 import { Lists } from "../../components/Lists";
 
 export default function List() {
-  const router = useHistory();
+  const navigate = useNavigate();
 
   function handleNavigate() {
-    router.push("/");
+    navigate("/dashboard");
   }
 
   const [home, setHome] = useState(false);

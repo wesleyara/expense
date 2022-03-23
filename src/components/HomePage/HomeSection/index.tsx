@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ilustrationSecone from "../../../assets/images/ilustration-home.svg";
 import { useUser } from "../../../hooks/useUser";
 import { useEffect } from "react";
@@ -6,10 +6,10 @@ import { useEffect } from "react";
 import { SHome } from "./style";
 
 export function SectionOne() {
-  const router = useHistory();
+  const navigate = useNavigate();
 
   function handleNavigate() {
-    router.push("/dashboard");
+    navigate("/dashboard");
   }
 
   const { user, setUser } = useUser();

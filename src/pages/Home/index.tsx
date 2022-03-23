@@ -1,14 +1,14 @@
 import { NavBar } from "../../layout/NavBar";
 import { HomePage } from "../../components/HomePage";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useUser } from "../../hooks/useUser";
 import { useEffect } from "react";
 
 export default function Home() {
-  const router = useHistory();
+  const navigate = useNavigate();
 
   function handleNavigate() {
-    router.push("/dashboard");
+    navigate("/dashboard");
   }
 
   const { user, setUser } = useUser();

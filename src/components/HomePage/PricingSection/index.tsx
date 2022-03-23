@@ -1,46 +1,36 @@
-import { GrCloudComputer } from "react-icons/gr";
-import { DiJavascript1 } from "react-icons/di";
-import { FaMobileAlt } from "react-icons/fa";
+import { BiPlanet } from "react-icons/bi";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
-import { SFeatures, SHome } from "./style";
+import { SHome } from "./style";
 
-export function SectionSix() {
+export function SectionSeven() {
+  const navigate = useNavigate();
+
+  function handleNavigate() {
+    navigate("/dashboard");
+  }
+
   return (
-    <section data-aos="fade-right">
-      <SHome id="aboutUs">
-        <h2>The Product we work with.</h2>
-        <span>
-          Everything we developed it was made for you. See each of our features,
-          designed exclusively for your best experience using our product.
-        </span>
-      </SHome>
-      <SFeatures>
-        <div className="cardFeatures">
-          <div
-            style={{
-              backgroundColor: "rgba(0, 255, 255, 0.2)",
-            }}
-          >
-            <GrCloudComputer />
-          </div>
-          <h2>Storage</h2>
-          <span>Data stored on local storage</span>
-        </div>
-        <div className="cardFeatures">
-          <div style={{ backgroundColor: "rgba(255, 255, 0, 0.3)" }}>
-            <DiJavascript1 />
-          </div>
-          <h2>JavaScript</h2>
-          <span>Made with one of the most famous programming languages</span>
-        </div>
-        <div className="cardFeatures">
-          <div style={{ backgroundColor: "rgba(128, 0, 128, 0.3)" }}>
-            <FaMobileAlt />
-          </div>
-          <h2>Cross plataform</h2>
-          <span>You have acess on any devices</span>
-        </div>
-      </SFeatures>
-    </section>
+    <SHome data-aos="fade-left">
+      <h2 id="pricing">Free forever</h2>
+
+      <div>
+        <BiPlanet />
+        <h3>Free plan</h3>
+
+        <ul>
+          <li>Unlimited storage</li>
+          <li>Support 24 hours</li>
+          <li>Always updated</li>
+        </ul>
+
+        <span>$0,00/year</span>
+        <br />
+        <button onClick={handleNavigate}>
+          Get this <AiOutlineArrowRight />
+        </button>
+      </div>
+    </SHome>
   );
 }

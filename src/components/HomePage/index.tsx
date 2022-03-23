@@ -3,8 +3,8 @@ import { SectionFive } from "./FeaturesSectionThree";
 import { SectionFour } from "./FeaturesSectionTwo";
 import { SectionOne } from "./HomeSection";
 import { SectionTwo } from "./OverviewSection";
-import { SectionSeven } from "./AboutUsSection";
-import { SectionSix } from "./PricingSection";
+import { SectionSeven } from "./PricingSection";
+import { SectionSix } from "./AboutUsSection";
 import { SectionThree } from "./FeaturesSectionOne";
 
 export function HomePage() {

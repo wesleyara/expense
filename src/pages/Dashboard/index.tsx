@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Infos } from "../../components/Infos";
 import { Stats } from "../../components/Stats";
@@ -15,7 +15,7 @@ export default function Dashboard() {
 
   // const imports
 
-  const router = useHistory();
+  const navigate = useNavigate();
 
   const { user, setUser } = useUser();
   const { setData } = useData();
@@ -23,7 +23,7 @@ export default function Dashboard() {
   // handleFunctions
 
   function handleNavigate() {
-    router.push("/");
+    navigate("/dashboard");
   }
 
   // UseEffects
