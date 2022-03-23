@@ -1,11 +1,11 @@
 // import { useUser } from "../../hooks/useUser";
-import { SectionFive } from "./SectionFive";
-import { SectionFour } from "./SectionFour";
-import { SectionOne } from "./SectionOne";
-import { SectionTwo } from "./SectionTwo";
-import { SectionSeven } from "./SectionSeven";
-import { SectionSix } from "./SectionSix";
-import { SectionThree } from "./SectionThree";
+import { SectionFive } from "./FeaturesSectionThree";
+import { SectionFour } from "./FeaturesSectionTwo";
+import { SectionOne } from "./HomeSection";
+import { SectionTwo } from "./OverviewSection";
+import { SectionSeven } from "./AboutUsSection";
+import { SectionSix } from "./PricingSection";
+import { SectionThree } from "./FeaturesSectionOne";
 
 export function HomePage() {
   // const { user } = useUser();
