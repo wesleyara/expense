@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Switch as Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 
 import Dashboard from "./pages/Dashboard";
@@ -25,9 +21,9 @@ function App() {
       <DataContextProvider>
         <Router>
           <Routes>
-            <Route path="/" exact component={Home} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/list" component={List} />
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/list" element={<List />} />
           </Routes>
         </Router>
         <GlobalStyle />

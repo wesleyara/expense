@@ -23,7 +23,7 @@ export default function Dashboard() {
   // handleFunctions
 
   function handleNavigate() {
-    navigate("/dashboard");
+    navigate("/");
   }
 
   // UseEffects

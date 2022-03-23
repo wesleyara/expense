@@ -9,7 +9,7 @@ export default function List() {
   const navigate = useNavigate();
 
   function handleNavigate() {
-    navigate("/dashboard");
+    navigate("/");
   }
 
   const [home, setHome] = useState(false);
