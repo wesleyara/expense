@@ -5,7 +5,7 @@ import ilustrationSecthree from "../../../assets/images/ilustration-secthree.svg
 
 export function SectionThree() {
   return (
-    <SHome data-aos="fade-left" id="features">
+    <SHome data-aos="fade-right" id="features">
       <article>
         <span>ALWALYS ONLINE</span>
         <div>

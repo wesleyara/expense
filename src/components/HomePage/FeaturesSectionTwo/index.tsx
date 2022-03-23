@@ -3,7 +3,7 @@ import { SHome } from "./style";
 
 export function SectionFour() {
   return (
-    <SHome data-aos="fade-right">
+    <SHome data-aos="fade-left">
       <figure>
         <span>
           <img src={ilustrationSecfour} alt="ilustration home" />
