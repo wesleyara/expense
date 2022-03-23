@@ -45,61 +45,64 @@ export default function LandingSalary() {
           <br />
           <form onSubmit={handleSetData}>
             <h2>Enter values in the fields to continue</h2>
-            <p>Salary:</p>
-            <span>
-              <button type="button">R$</button>
+
+            <label htmlFor="salary">Salary:</label>
+            <div>
+              <span>R$</span>
               <input
                 type="number"
+                id="salary"
                 onChange={(e) => setSalary(Number(e.target.value))}
                 min="1"
                 placeholder="Enter salary value"
               />
-            </span>
+            </div>
 
-            <p>Count dedicated percentage:</p>
-            <span>
-              <button type="button">%</button>
+            <label htmlFor="count">Count dedicated percentage:</label>
+            <div>
+              <span>%</span>
               <input
                 type="number"
+                id="count"
                 onChange={(e) => setCount(Number(e.target.value))}
                 min="0"
                 max="100"
                 placeholder="Enter count dedicate"
               />
-            </span>
+            </div>
 
-            <p>Free dedicated percentage:</p>
-            <span>
-              <button type="button">%</button>
+            <label htmlFor="free">Free dedicated percentage:</label>
+            <div>
+              <span>%</span>
               <input
                 type="number"
+                id="free"
                 onChange={(e) => setFree(Number(e.target.value))}
                 min="0"
                 max="100"
                 placeholder="Enter free dedicate"
               />
-            </span>
+            </div>
 
-            <p>Savings dedicated percentage:</p>
-            <span>
-              <button type="button">%</button>
+            <label htmlFor="savings">Savings dedicated percentage:</label>
+            <div>
+              <span>%</span>
               <input
                 type="number"
+                id="savings"
                 onChange={(e) => setSavings(Number(e.target.value))}
                 min="0"
                 max="100"
                 placeholder="Enter savings dedicate"
               />
-            </span>
+            </div>
             <button className="start" type="submit">
               Start
             </button>
           </form>
         </article>
         <figure>
-          <span>
-            <img src={ilustration} alt="ilustration home" />
-          </span>
+          <img src={ilustration} alt="ilustration home" />
         </figure>
       </SHome>
 

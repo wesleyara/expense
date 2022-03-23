@@ -28,16 +28,18 @@ export const SHome = styled.section`
       }
     }
     form {
+      margin-bottom: 20px;
+
       p {
         margin-top: 10px;
       }
 
-      span {
+      div {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
 
-        button {
+        span {
           display: flex;
           justify-content: center;
           align-items: center;
