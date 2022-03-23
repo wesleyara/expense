@@ -14,7 +14,7 @@ export const SInfos = styled.section`
   border-bottom: 1px solid #e7e7e7;
   border-top: 1px solid #e7e7e7;
 
-  span {
+  div {
     display: flex;
     flex-wrap: wrap;
     align-items: center;

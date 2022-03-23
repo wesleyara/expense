@@ -10,14 +10,14 @@ export function Infos() {
         <>
           <span>Salary: R$ {user.salary.toLocaleString()}</span>
 
-          <span>
+          <div>
             <ul>
               <li>Count: {user.percentCount}%</li>
               <li>Free: {user.percentFree}%</li>
               <li>Savings: {user.percentSavings}%</li>
             </ul>
             <button onClick={() => setUser(undefined)}>Edit</button>
-          </span>
+          </div>
         </>
       )}
     </SInfos>
