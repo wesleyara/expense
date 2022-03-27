@@ -7,6 +7,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Hind Siliguri';
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
   }
 
   .overlay-modal {
